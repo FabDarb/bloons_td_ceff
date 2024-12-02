@@ -11,10 +11,10 @@ class Playground extends SpriteComponent
     if (game.typeOfMonkey != TypeOfMonkey.none &&
         game.hud.monkeyOverlay!.isPossable) {
       game.coins -= game.hud.monkeyOverlay!.price;
-      if (game.typeOfMonkey != TypeOfMonkey.basic) {
+      if (game.typeOfMonkey == TypeOfMonkey.basic) {
         add(BasicMonkey(event.localPosition));
         game.typeOfMonkey = TypeOfMonkey.none;
-      } else if (game.typeOfMonkey != TypeOfMonkey.souper) {
+      } else if (game.typeOfMonkey == TypeOfMonkey.souper) {
         add(SouperMonkey(event.localPosition));
         game.typeOfMonkey = TypeOfMonkey.none;
       }
